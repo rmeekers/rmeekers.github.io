@@ -1,0 +1,302 @@
+{
+  "basics": {
+    "name": "Rutger Meekers",
+    "label": "Internet Consultant",
+    "picture": "",
+    "email": "rutger@meekers.eu",
+    "phone": "+32 498 12 10 20",
+    "website": "",
+    "summary": "15 years of experience in several agile project management and consultancy roles. Has been active in a wide variety of industries.  Goes extremely far to reach the upper level of customer satisfaction. Only satisfied once his customers are. Promises are made to be kept. His relationships are based on transparency and honesty.  Passionate about the fast-moving world of ICT and Internet. Eager to learn and open for improvements. Quickly picks out any flaws in his environment.  Takes the lead in difficult situations while keeping his head cool.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Mechelen",
+      "countryCode": "BE",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "RutgerMeekers",
+        "url": "https://twitter.com/RutgerMeekers"
+      },
+      {
+        "network": "GitHub",
+        "username": "rmeekers",
+        "url": "github.com/rmeekers"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "RutgerMeekers",
+        "url": "https://linkedin.com/in/RutgerMeekers"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Procurios",
+      "position": "Internet Consultant",
+      "website": "www.procurios.com",
+      "startDate": "2011-04-18",
+      "endDate": "",
+      "summary": "Internet consultant for the Procurios Webplatform",
+      "highlights": [
+        "Procurios Platform implementations",
+        "Internet Strategy Development",
+        "Software documentation",
+        "User Training"
+      ]
+    },
+    {
+      "company": "Etex Group",
+      "position": "Product Owner",
+      "website": "www.etexgroup.com",
+      "startDate": "2015-07-07",
+      "endDate": "2016-07-08",
+      "summary": "Product Owner for the Etex Global Web Platform which is built on Sitecore and ADAM technologies and has interfaces to many backend systems.",
+      "highlights": [
+        "Responsible for the Product Backlog",
+        "Working with several external development teams",
+        "Google Tag Manager implementation (+100 websites)",
+        "Google Analytics implementation (+100 websites)",
+        "Process optimization"
+      ]
+    },
+    {
+      "company": "Katoen Natie",
+      "position": "WMS Project Manager",
+      "website": "www.katoennatie.com",
+      "startDate": "2008-04-01",
+      "endDate": "2011-04-15",
+      "summary": "My team and I were responsible for the WMS software (built on MS Dynamics Nav) to run a complete logistic unit within the BU Industry.",
+      "highlights": [
+        "Business and functional analysis",
+        "Project Management",
+        "Software testing",
+        "User training"
+      ]
+    },
+    {
+      "company": "eSOL",
+      "position": "Founder, ICT Consultant",
+      "website": "",
+      "startDate": "2004-08-01",
+      "endDate": "2008-10-31",
+      "summary": "My own company which I've founded after I quit school at the age of 19. eSOL was an ICT service provider for the SMB market.",
+      "highlights": [
+        "ICT Consultancy",
+        "Project Management (offshore outsourcing to Eastern Europe)",
+        "Network & System administration"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "School De WEGwijzer",
+      "position": "Board Member",
+      "website": "www.schooldewegwijzer.be",
+      "startDate": "2014-04-01",
+      "endDate": "",
+      "summary": "Elementary School",
+      "highlights": [
+        "Migrating the school to the cloud (Office 365)",
+        "Improvement of the ICT infrastructure",
+        "User Training"
+      ]
+    },
+    {
+      "organization": "BIO",
+      "position": "Co-founder",
+      "website": "",
+      "startDate": "2001-01-01",
+      "endDate": "2003-12-31",
+      "summary": "LAN-Party organisation of which I was the co-founder. We organised eight editions with 150 - 250 attendants.  This was one of my hobby projects during my schooltime and my first experience with project management and event organisation",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Agilar",
+      "area": "",
+      "studyType": "Scrum Certified Product Owner",
+      "startDate": "2015-11-01",
+      "endDate": "2015-11-02",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Google",
+      "area": "",
+      "studyType": "Google Tag Manager",
+      "startDate": "2015-06-01",
+      "endDate": "2015-06-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Cevora",
+      "area": "",
+      "studyType": "Train the trainer",
+      "startDate": "2015-04-01",
+      "endDate": "2015-04-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Google",
+      "area": "",
+      "studyType": "Making Sense of Data",
+      "startDate": "2015-04-01",
+      "endDate": "2015-04-15",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Schrijftrainer.be",
+      "area": "",
+      "studyType": "Web Copywriting",
+      "startDate": "2014-05-05",
+      "endDate": "2014-05-19",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Cevora",
+      "area": "",
+      "studyType": "Social Media Analytics",
+      "startDate": "2014-04-23",
+      "endDate": "2014-04-23",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Google",
+      "area": "",
+      "studyType": "Digital Analytics Fundamentals",
+      "startDate": "2013-10-01",
+      "endDate": "2013-10-07",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "BCCL",
+      "area": "",
+      "studyType": "Customs and Excise Duties",
+      "startDate": "2011-02-01",
+      "endDate": "2011-02-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Project@",
+      "area": "",
+      "studyType": "ICT Project Management",
+      "startDate": "2010-09-01",
+      "endDate": "2010-09-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "VDAB",
+      "area": "",
+      "studyType": "Cisco CCNA",
+      "startDate": "2009-09-01",
+      "endDate": "2010-06-30",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Software",
+      "level": "",
+      "keywords": [
+        "UX Validation",
+        "Testing",
+        "User Training"
+      ]
+    },
+    {
+      "name": "Scrum",
+      "level": "Certified Product Owner",
+      "keywords": []
+    },
+    {
+      "name": "Google Analytics",
+      "level": "Individual Certified",
+      "keywords": []
+    },
+    {
+      "name": "Google Tag Manager",
+      "level": "Fundamentals Certified",
+      "keywords": []
+    },
+    {
+      "name": "Hubspot",
+      "level": "Inbound Certified",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "Dutch",
+      "fluency": "Mother tongue"
+    },
+    {
+      "language": "English",
+      "fluency": "Very Good"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Photography",
+      "keywords": [
+        "Nikon",
+        "Lightroom"
+      ]
+    },
+    {
+      "name": "Food",
+      "keywords": [
+        "Cooking",
+        "Gastronomy"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jos Jelier",
+      "reference": "Rutger is a diligent, hard and honest worker with a lot of experience with and knowledge of web (applications) in general, content management, usability, e-commerce and web analytics. He understands software and its (best) use cases quickly. He has a talent for helping clients, to implement software with a maximum fit with the clients need. At Procurios he has always been a valued employee."
+    },
+    {
+      "name": "Peter Jensen",
+      "reference": "Working with Rutger on a rather non-standard project for a non-profit with some very specific requirements. Always pragmatic in his approach and will provide positive input. Not afraid to provide very valid challenges if needed."
+    },
+    {
+      "name": "Eline Walda",
+      "reference": "My contact with Rutger was brief but highly effective. Rutger has helped me set up Google Tag Manager and has done so in such a manner that my goals are fully met. Moreover, a workaround had to be found for a technical issue, and he not only managed to do this, he exceeded my expectations. I am very happy with the results and I highly recommend Rutger."
+    },
+    {
+      "name": "Patrick Van Bergen",
+      "reference": "I have come to know Rutger as a friendly guy with a strong eye for detail and quality. He knows what he wants and gets it done.   He followed developments in the field of SEO closely and gave his customers advise. He made himself into an expert in Google Analytics and Google Tag manager, and used this knowledge to set up many implementations for customers."
+    },
+    {
+      "name": "Rajiv Karmacharya",
+      "reference": "Rutger and I worked together for couple of projects at IToffshore and Procurios. We had wonderful time back then. I find him knowledgeable and very result oriented person. From sales and account management prospective, he is the best person a client can get. He considers requirement of client as his own and ensure they get the what they really need."
+    },
+    {
+      "name": "Jonas Lauwerysen",
+      "reference": "A very pleasant colleague and a competent boss. As a supervisor Rutger is aware of what his employees are working on and is very eager to step in when help is needed. He has an objective approach to every problem and looks for the most effective way to solve it.  He often offers new perspectives on possible solutions and listens to everyone´s suggestion.  Rutger has a strong work ethic and is the first to arrive and the last to leave the office. He doesn´t shy away from crisis situations or difficult customers.  He is calm and never panics or loses focus.  It´s been a real pleasure working with him."
+    },
+    {
+      "name": "Jurgen De Cock",
+      "reference": "Rutger is a no nonsense hands-on business/IT-analyst and who manages to quickly identify operational needs and translate them clearly into IT requirements. Rutger also has a keen interest in new technologies.  As project manager, even though being customer-oriented, he will look for the fine balance between nice-to-have and need-to-have."
+    },
+    {
+      "name": "François Deforche",
+      "reference": "I experienced Rutger as a hands-on professional always looking for the most logical solution and not afraid to innovate. Whilst being a team-player he always kept track of the goals of his projects."
+    }
+  ]
+}

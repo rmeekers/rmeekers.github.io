@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Rutger Meekers</title>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <style>
+            .clear-margin {
+  margin: 0;
+}
+.space-top {
+  margin-top: 10px;
+}
+.icon-left {
+  margin-right: 5px;
+}
+.icon-right {
+  margin-left: 5px;
+}
+.labels {
+  word-spacing: 5px;
+}
+.label-keyword {
+  display: inline-block;
+  background: #7eb0db;
+  color: white;
+  font-size: 0.9em;
+  padding: 5px;
+  border: 1px solid #357ebd;
+}
+body {
+  font-family: 'Lato';
+  background: #f0f0f0;
+  color: #333333;
+}
+.main {
+  padding: 5px;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  min-height: 300px;
+  padding: 10px;
+}
+.card-nested {
+  min-height: 0;
+  margin-bottom: 10px;
+  border-width: 1px 0 0 0;
+}
+.background-card {
+  padding: 10px 20px;
+}
+.card-wrapper {
+  padding: 5px;
+}
+.text-bolder {
+  font-weight: bold;
+}
+.background-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.background-details .detail .icon {
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+.background-details .detail .info {
+  width: 100%;
+}
+.background-details .detail .title,
+.background-details .detail .icon {
+  color: #707070;
+}
+.background-details .detail .icon,
+.background-details .detail .info {
+  display: table-cell;
+  padding: 0 10px;
+}
+.info .content.has-sidebar {
+  width: 80%;
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  border-right: 1px solid #cdcdcd;
+}
+.info .sidebar {
+  margin-left: 80%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.profile-pic {
+  padding: 20px 0;
+}
+.contact-details .detail {
+  display: table;
+  padding: 10px 0;
+}
+.contact-details .detail .icon {
+  padding: 0 10px;
+  color: #707070;
+}
+.contact-details .detail .info {
+  font-size: 0.8em;
+}
+.contact-details .detail .icon,
+.contact-details .detail .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 992px) {
+  .profile-card {
+    min-height: 180px !important;
+  }
+  .profile-card .detail {
+    display: inline-block !important;
+  }
+  .profile-card .contact-details {
+    text-align: center !important;
+  }
+  .profile-card .social-links {
+    padding-top: 10px;
+  }
+  .card-wrapper {
+    position: static;
+    width: 100%;
+    top: 0;
+  }
+  hr {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+}
+.social-link {
+  margin-left: 5px;
+}
+.social-link:first-child {
+  margin-left: 0;
+}
+.social-link:hover {
+  text-decoration: none;
+}
+.link-github {
+  color: #454545;
+}
+.link-github:hover {
+  color: #2b2b2b;
+}
+.link-twitter {
+  color: #33ccff;
+}
+.link-twitter:hover {
+  color: #00bfff;
+}
+.link-blog {
+  color: #f36f24;
+}
+.link-blog:hover {
+  color: #d8560c;
+}
+.link-linkedin {
+  color: #007bb6;
+}
+.link-linkedin:hover {
+  color: #005983;
+}
+.link-skype {
+  color: #12a5f4;
+}
+.link-skype:hover {
+  color: #0986ca;
+}
+.card-skills {
+  position: relative;
+}
+.skill-level {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.skill-level .skill-progress {
+  position: absolute;
+  border-radius: 3px;
+  bottom: 0;
+  width: 100%;
+  -webkit-transition: height 1s ease;
+}
+.skill-level .skill-progress.beginner {
+  height: 50%;
+  background: #e74c3c;
+}
+.skill-level .skill-progress.intermediate {
+  height: 70%;
+  background: #f1c40f;
+}
+.skill-level .skill-progress.advanced {
+  height: 80%;
+  background: #428bca;
+}
+.skill-level .skill-progress.master {
+  height: 95%;
+  background: #5cb85c;
+}
+.skill-info {
+  margin-left: 10px;
+}
+
+        </style>
+    </head>
+
+    <body>
+    <noscript>
+	<iframe src="//www.googletagmanager.com/ns.html?id=GTM-N832L4" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-N832L4');
+</script>
+        <script>
+            window.onload = function () {
+                $( ".background-card" ).css( "min-height", window.screen.availHeight + "px" );
+                $( ".js-tooltip" ).tooltip();
+            }
+        </script>
+        <div class="container-fluid">
+            <div class="row main clearfix">
+                <section class="col-md-3 card-wrapper">
+                    <div class="card profile-card">
+                        <div class="profile-pic">
+                            <img class="media-object img-circle center-block"  data-src="holder.js/64x64"
+                                alt="64x64" src="//www.gravatar.com/avatar/e08e78b1e5720b9758c1405fc3c20369?s=200&amp;r=pg&amp;d=mm" style="width: 100px; height: 100px;">
+                        </div>
+                            <h3 class="text-center text-bolder"> Rutger Meekers</h3>
+                            <h5 class="text-muted text-center">Internet Consultant</h5>
+                            <hr>
+
+                            <div class="contact-details clearfix">
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-location-arrow"></i>
+                                        </span>
+
+                                            <span class="info">
+                                                Mechelen, BE
+                                            </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-phone"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            +32 498 12 10 20
+                                        </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon">
+                                            <i class="fa fa-lg fa-envelope"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            rutger@meekers.eu
+                                        </span>
+                                    </div>
+
+                                    <div class="detail">
+                                        <span class="icon" title="Languages I speak">
+                                            <i class="fa fa-lg fa-language"></i>
+                                        </span>
+
+                                        <span class="info">
+                                            Dutch, English
+                                        </span>
+                                    </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="social-links text-center">
+                                    <a class="fa fa-linkedin fa-2x social-link link-linkedin"
+                                           href="https://linkedin.com/in/RutgerMeekers" target="_blank"></a>
+                                    <a class="fa fa-github fa-2x social-link link-github"
+                                           href="http://www.github.com/rmeekers" target="_blank"></a>
+                                    <a class="fa fa-twitter fa-2x social-link link-twitter"
+                                           href="http://www.twitter.com/RutgerMeekers" target="_blank"></a>
+                            </div>
+                    </div>
+                </section>
+
+                <section class="col-md-9 card-wrapper pull-right">
+                    <div class="card background-card">
+                        <h4 class="text-uppercase text-bolder">Background</h4>
+                        <hr>
+
+                        <div class="background-details">
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-user"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        About
+                                    </h4>
+
+                                    <div class="content">
+                                        15 years of experience in several agile project management and consultancy roles. Has been active in a wide variety of industries.  Goes extremely far to reach the upper level of customer satisfaction. Only satisfied once his customers are. Promises are made to be kept. His relationships are based on transparency and honesty.  Passionate about the fast-moving world of ICT and Internet. Eager to learn and open for improvements. Quickly picks out any flaws in his environment.  Takes the lead in difficult situations while keeping his head cool.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-building"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Work Experience
+                                    </h4>
+
+                                    <ul class="list-unstyled">
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Internet Consultant</strong>,&nbsp;Procurios</p>
+                                                    <p>Internet consultant for the Procurios Webplatform</p>
+                                                        <ul>
+                                                                <li> Procurios Platform implementations </li>
+                                                                <li> Internet Strategy Development </li>
+                                                                <li> Software documentation </li>
+                                                                <li> User Training </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Joined:</strong>&nbsp;
+                                                        Apr, 2011
+                                                    </p>
+                                                    <p>
+                                                            <span class="label label-success">
+                                                                Currently Working
+                                                            </span>
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        5 years 4 months
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Product Owner</strong>,&nbsp;Etex Group</p>
+                                                    <p>Product Owner for the Etex Global Web Platform which is built on Sitecore and ADAM technologies and has interfaces to many backend systems.</p>
+                                                        <ul>
+                                                                <li> Responsible for the Product Backlog </li>
+                                                                <li> Working with several external development teams </li>
+                                                                <li> Google Tag Manager implementation (+100 websites) </li>
+                                                                <li> Google Analytics implementation (+100 websites) </li>
+                                                                <li> Process optimization </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Joined:</strong>&nbsp;
+                                                        Jul, 2015
+                                                    </p>
+                                                    <p>
+                                                            <strong>Left:</strong>&nbsp;
+                                                            Jul, 2016
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        1 year
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>WMS Project Manager</strong>,&nbsp;Katoen Natie</p>
+                                                    <p>My team and I were responsible for the WMS software (built on MS Dynamics Nav) to run a complete logistic unit within the BU Industry.</p>
+                                                        <ul>
+                                                                <li> Business and functional analysis </li>
+                                                                <li> Project Management </li>
+                                                                <li> Software testing </li>
+                                                                <li> User training </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Joined:</strong>&nbsp;
+                                                        Apr, 2008
+                                                    </p>
+                                                    <p>
+                                                            <strong>Left:</strong>&nbsp;
+                                                            Apr, 2011
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        3 years
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="card card-nested clearfix">
+                                                <div class="content has-sidebar">
+                                                    <p><strong>Founder, ICT Consultant</strong>,&nbsp;eSOL</p>
+                                                    <p>My own company which I&#x27;ve founded after I quit school at the age of 19. eSOL was an ICT service provider for the SMB market.</p>
+                                                        <ul>
+                                                                <li> ICT Consultancy </li>
+                                                                <li> Project Management (offshore outsourcing to Eastern Europe) </li>
+                                                                <li> Network &amp; System administration </li>
+                                                        </ul>
+                                                </div>
+
+                                                <div class="sidebar text-muted text-center">
+                                                    <p>
+                                                        <strong>Joined:</strong>&nbsp;
+                                                        Aug, 2004
+                                                    </p>
+                                                    <p>
+                                                            <strong>Left:</strong>&nbsp;
+                                                            Oct, 2008
+                                                    </p>
+                                                    <p>
+                                                        <i class="fa fa-clock-o icon-left"></i>
+                                                        4 years 2 months
+                                                    </p>
+                                                </div>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-code"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Skills
+                                    </h4>
+
+                                    <div class="content">
+                                        <ul class="list-unstyled">
+                                                <li class="card card-nested card-skills">
+                                                    <!--  -->
+                                                    <div class="skill-info">
+                                                        <strong>Software</strong>
+                                                        
+
+                                                        <div class="space-top labels">
+                                                                <code>UX Validation</code>
+                                                                <code>Testing</code>
+                                                                <code>User Training</code>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <!--  -->
+                                                    <div class="skill-info">
+                                                        <strong>Scrum</strong>
+                                                        <span class="text-muted">— <em>Certified Product Owner</em></span>
+
+                                                        <div class="space-top labels">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <!--  -->
+                                                    <div class="skill-info">
+                                                        <strong>Google Analytics</strong>
+                                                        <span class="text-muted">— <em>Individual Certified</em></span>
+
+                                                        <div class="space-top labels">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <!--  -->
+                                                    <div class="skill-info">
+                                                        <strong>Google Tag Manager</strong>
+                                                        <span class="text-muted">— <em>Fundamentals Certified</em></span>
+
+                                                        <div class="space-top labels">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested card-skills">
+                                                    <!--  -->
+                                                    <div class="skill-info">
+                                                        <strong>Hubspot</strong>
+                                                        <span class="text-muted">— <em>Inbound Certified</em></span>
+
+                                                        <div class="space-top labels">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="detail">
+                                <div class="icon">
+                                    <i class="fa fa-lg fa-mortar-board"></i>
+                                </div>
+                                <div class="info">
+                                    <h4 class="title text-uppercase">
+                                        Education
+                                    </h4>
+
+                                    <div class="content">
+                                        <ul class="list-unstyled">
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Scrum Certified Product Owner</strong> @ Agilar
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Nov, 2015
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Nov, 2015
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            2 days
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Google Tag Manager</strong> @ Google
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Jun, 2015
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Jun, 2015
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            1 day
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Train the trainer</strong> @ Cevora
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Apr, 2015
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Apr, 2015
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            1 day
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Making Sense of Data</strong> @ Google
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Apr, 2015
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Apr, 2015
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            15 days
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Web Copywriting</strong> @ Schrijftrainer.be
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            May, 2014
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                May, 2014
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            15 days
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Social Media Analytics</strong> @ Cevora
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Apr, 2014
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Apr, 2014
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            1 day
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Digital Analytics Fundamentals</strong> @ Google
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Oct, 2013
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Oct, 2013
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            7 days
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Customs and Excise Duties</strong> @ BCCL
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Feb, 2011
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Feb, 2011
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            1 day
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>ICT Project Management</strong> @ Project@
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Sep, 2010
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Sep, 2010
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            1 day
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="card card-nested clearfix">
+                                                    <div class="content has-sidebar">
+                                                        <p>
+                                                            <strong>Cisco CCNA</strong> @ VDAB
+                                                        </p>
+                                                    </div>
+                                                    <div class="sidebar text-muted text-center">
+                                                        <p>
+                                                            <strong>Started:</strong>&nbsp;
+                                                            Sep, 2009
+                                                        </p>
+                                                        <p>
+                                                                <strong>Completion:</strong>&nbsp;
+                                                                Jun, 2010
+                                                        </p>
+                                                        <p>
+                                                            <i class="fa fa-clock-o icon-left"></i>
+                                                            9 months
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                                <div class="detail">
+                                    <div class="icon">
+                                        <i class="fa fa-lg fa-child"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="title text-uppercase">
+                                            Volunteer Work
+                                        </h4>
+
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                    <li class="card card-nested clearfix">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>Board Member</strong>,&nbsp;
+                                                                School De WEGwijzer
+                                                            </p>
+                                                            <p>Elementary School</p>
+                                                            <ul>
+                                                                    <li> Migrating the school to the cloud (Office 365) </li>
+                                                                    <li> Improvement of the ICT infrastructure </li>
+                                                                    <li> User Training </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Since:</strong>&nbsp;
+                                                                Apr, 2014
+                                                            </p>
+                                                            <p>
+                                                                    <span class="label label-success">
+                                                                        Currently Volunteering
+                                                                    </span>
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <div class="content has-sidebar">
+                                                            <p>
+                                                                <strong>Co-founder</strong>,&nbsp;
+                                                                BIO
+                                                            </p>
+                                                            <p>LAN-Party organisation of which I was the co-founder. We organised eight editions with 150 - 250 attendants.  This was one of my hobby projects during my schooltime and my first experience with project management and event organisation</p>
+                                                            <ul>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="sidebar text-muted text-center">
+                                                            <p>
+                                                                <strong>Since:</strong>&nbsp;
+                                                                Jan, 2001
+                                                            </p>
+                                                            <p>
+                                                                    <strong>Until:</strong>&nbsp;
+                                                                    Dec, 2003
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="detail">
+                                    <div class="icon">
+                                        <i class="fa fa-lg fa-heart"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="title text-uppercase">
+                                            Interests
+                                        </h4>
+
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Photography</strong>
+                                                        </p>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Nikon</span>
+                                                                <span class="label label-keyword">Lightroom</span>
+                                                        </div>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Food</strong>
+                                                        </p>
+
+                                                        <div class="space-top labels">
+                                                                <span class="label label-keyword">Cooking</span>
+                                                                <span class="label label-keyword">Gastronomy</span>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="detail">
+                                    <div class="icon">
+                                        <i class="fa fa-lg fa-thumbs-up"></i>
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="title text-uppercase">
+                                            References
+                                        </h4>
+
+                                        <div class="content">
+                                            <ul class="list-unstyled">
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Jos Jelier</strong>
+                                                        </p>
+                                                        <p class="clear-margin">Rutger is a diligent, hard and honest worker with a lot of experience with and knowledge of web (applications) in general, content management, usability, e-commerce and web analytics. He understands software and its (best) use cases quickly. He has a talent for helping clients, to implement software with a maximum fit with the clients need. At Procurios he has always been a valued employee.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Peter Jensen</strong>
+                                                        </p>
+                                                        <p class="clear-margin">Working with Rutger on a rather non-standard project for a non-profit with some very specific requirements. Always pragmatic in his approach and will provide positive input. Not afraid to provide very valid challenges if needed.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Eline Walda</strong>
+                                                        </p>
+                                                        <p class="clear-margin">My contact with Rutger was brief but highly effective. Rutger has helped me set up Google Tag Manager and has done so in such a manner that my goals are fully met. Moreover, a workaround had to be found for a technical issue, and he not only managed to do this, he exceeded my expectations. I am very happy with the results and I highly recommend Rutger.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Patrick Van Bergen</strong>
+                                                        </p>
+                                                        <p class="clear-margin">I have come to know Rutger as a friendly guy with a strong eye for detail and quality. He knows what he wants and gets it done.   He followed developments in the field of SEO closely and gave his customers advise. He made himself into an expert in Google Analytics and Google Tag manager, and used this knowledge to set up many implementations for customers.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Rajiv Karmacharya</strong>
+                                                        </p>
+                                                        <p class="clear-margin">Rutger and I worked together for couple of projects at IToffshore and Procurios. We had wonderful time back then. I find him knowledgeable and very result oriented person. From sales and account management prospective, he is the best person a client can get. He considers requirement of client as his own and ensure they get the what they really need.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Jonas Lauwerysen</strong>
+                                                        </p>
+                                                        <p class="clear-margin">A very pleasant colleague and a competent boss. As a supervisor Rutger is aware of what his employees are working on and is very eager to step in when help is needed. He has an objective approach to every problem and looks for the most effective way to solve it.  He often offers new perspectives on possible solutions and listens to everyone´s suggestion.  Rutger has a strong work ethic and is the first to arrive and the last to leave the office. He doesn´t shy away from crisis situations or difficult customers.  He is calm and never panics or loses focus.  It´s been a real pleasure working with him.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>Jurgen De Cock</strong>
+                                                        </p>
+                                                        <p class="clear-margin">Rutger is a no nonsense hands-on business/IT-analyst and who manages to quickly identify operational needs and translate them clearly into IT requirements. Rutger also has a keen interest in new technologies.  As project manager, even though being customer-oriented, he will look for the fine balance between nice-to-have and need-to-have.</p>
+                                                    </li>
+                                                    <li class="card card-nested clearfix">
+                                                        <p>
+                                                            <strong>François Deforche</strong>
+                                                        </p>
+                                                        <p class="clear-margin">I experienced Rutger as a hands-on professional always looking for the most logical solution and not afraid to innovate. Whilst being a team-player he always kept track of the goals of his projects.</p>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js"></script>
+    </body>
+</html>
